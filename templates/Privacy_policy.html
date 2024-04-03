@@ -1,0 +1,403 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popoutbox</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="16x16">
+  <style>
+    .mark {
+      font-weight: bold;
+    }
+
+    .h4 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .Privacy_policy {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: black;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    .navbar-item img {
+      max-height: 70px;
+    }
+
+    .smaller-image {
+      max-width: 300px;
+      display: flex;
+      margin-left: 150px;
+    }
+
+    .welcome-text {
+      font-size: 44px;
+      margin-bottom: 10px;
+      margin-left: 150px;
+      font-weight: bold;
+    }
+
+    .custom-column {
+      height: 300px;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+
+    .media-content {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      .smaller-image {
+        max-width: 400px;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media(max-width: 767px) {
+
+      /* <== You can change this break point as per your  needs */
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .smaller-image {
+        max-width: 210px;
+        margin-left: 50px;
+      }
+
+      .welcome-text {
+        font-size: 20px;
+      }
+
+      .media-content {
+        overflow-x: unset !important;
+      }
+
+      .copyright-text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .copyright-text {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      /* Add some padding for better visibility */
+    }
+
+    .copy {
+      color: #e3e9ff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-transparent" style="background-color: #e3e9ff;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'home' %}">
+        <img class="group" src="{% static 'img/group-513779.png' %}" />
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="contain" style="background-color: #e3e9ff;">
+    <div class="columns is-vcentered">
+      <div class="column is-half has-text-right">
+        <img class="img smaller-image img-centered" src="{% static 'img/group-513782.png' %}" />
+      </div>
+      <div class="column is-half">
+        <div class="welcome-text">
+          <span class="text-wrapper">PRIVACY POLICY</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="Privacy_policy">
+    <p>
+      <br>
+    <h4 class="h4">Privacy policy</h4>
+    <p class="content is-large"> Thank you for your interest in Popoutbox. (“Popoutbox” “us” or “we”), our website at
+      www.popoutbox.in (the “Site”), our application(s) for your mobile device (the “App”), as well as all related
+      websites, networks, downloadable software, and other services provided by us and on which a link to this Privacy
+      Policy is displayed (collectively, together with the App and Site, our “Service”). This Privacy Policy (the
+      “Policy”) describes the information that we gather from you on the Service, how we use and disclose such
+      information, and the steps we take to protect such information. By using the Service, you consent to the privacy
+      practices described in this Policy.<br><br>
+    </p>
+    This Policy is incorporated into and is subject to the Popoutbox Terms of Service
+    [www.popoutbox.in/terms-conditions] (the “Terms”). Capitalized terms used but not defined in this Policy have the
+    meaning given to them in the Terms.<br><br>
+    <h4 class="mark">The information we collect on the Service:</h4>
+    <h4 class="mark">User-provided Information:</h4>
+    <p class="content is-large">
+      When you use the Service, you may provide and we may collect what is generally called “personally identifiable”
+      information, or “personal information,” which is information that specifically identifies an individual. Examples
+      of personal information include name, email address, mailing address, mobile phone number, and credit card or
+      other billing information. Personal information also includes other information, such as date of birth, geographic
+      area, or preferences, when any such information is linked to information that identifies a specific individual.
+      You may provide us with personal information in various ways on the Service. For example, you may provide us with
+      personal information when you register for an account, use the Service, or send us customer service-related
+      requests.
+      “Cookies” and “Automatically Collected” Information. When you use the Service, we may send one or more cookies –
+      small text files containing a string of alphanumeric characters – to your device. We may use both session cookies
+      and persistent cookies. A session cookie disappears after you close your browser. A persistent cookie remains
+      after you close your browser and may be used by your browser on subsequent visits to the Service. Please review
+      your web browser “Help” file to learn the proper way to modify your cookie settings. We may use third party
+      cookies on the service as well. Please note that if you delete, or choose not to accept, cookies from the Service,
+      you may not be able to utilize the features of the Service to their fullest potential. Popoutbox does not process
+      or respond to web browsers’ “do not track” signals or other similar transmissions that indicate a request to
+      disable online tracking of users who visit our Site or who use the Service.
+    </p>
+    <br><br>When you use the Service, we may also automatically record certain information from your device by using
+    various types of technology, including “clear gifs” or “web beacons”. This “automatically collected” information may
+    include your IP address or other device address or ID, web browser and/or device type, the websites that you visit
+    just before or just after you use the Service, the pages or other content you view or otherwise interact with on the
+    Service, and the dates and times that you visit, access, or use the Service. We also may use these technologies to
+    collect information regarding your interaction with email messages, such as whether you opened, clicked on, or
+    forwarded a message. This information is gathered from all users, and may be connected with other information about
+    you.
+    <br><br>
+    <h4 class="mark">Location Information:</h4>
+    <p class="content is-large">We may obtain information about your physical location, such as by use of GPS and other
+      geolocation features in your device, or by inference from other information we collect (for example, your IP
+      address indicates the general geographic region from which you are connecting to the Internet).
+      Third Party Web Beacons and Third Party Buttons. We may also implement third-party content or advertising on the
+      Service that may use clear gifs or other forms of web beacons, which allow the third-party content provider to
+      read and write cookies to your browser in connection with your viewing of the third party content on the Service.
+      Additionally, we may implement third party buttons (such as Facebook “like” or “share” buttons) that may allow
+      third parties to collect information about you through such third parties’ browser cookies, even when you do not
+      interact with the button. Information collected through web beacons and buttons is collected directly by these
+      third parties, and Popoutbox does not participate in that data transmission. Information collected by a third
+      party in this manner is subject to that third party’s own data collection, use, and disclosure policies.
+      <br><br>
+    <h4 class="mark">Integrated Services:</h4>
+    <p class="content is-large">You may be given the option to access or register for the Service through the use of
+      your user name and passwords for certain services provided by third parties (each, an “Integrated Service”), such
+      as through the use of your Facebook credentials through Facebook Connect, or otherwise have the option to
+      authorize an Integrated Service to provide personal information or other information to us. By authorizing us to
+      connect with an Integrated Service, you authorize us to access and store your name, email address(es), date of
+      birth, gender, current city, profile picture URL, and other information that the Integrated Service makes
+      available to us, and to use and disclose it in accordance with this Policy. You should check your privacy settings
+      on each Integrated Service to understand and change the information sent to us through each Integrated Service.
+      Please review each Integrated Service’s terms of use and privacy policies carefully before using their services
+      and connecting to our Service.
+      <br><br>
+    <h4 class="mark">Information from Other Sources:</h4>
+    <p class="content is-large">We may obtain information, including personal information, from third parties and
+      sources other than the Service, such as our partners, advertisers, and Integrated Services
+      How we use the information we collect. We use information we collect on the Service in a variety of ways in
+      providing the Service and operating our business, including the following:
+      We use the information that we collect on the Service to operate, maintain, enhance and provide all features of
+      the Service, to enable the Storage Services, to provide services and information that you request, to respond to
+      comments and questions and otherwise to provide support to users, and to process and deliver entries and rewards
+      in connection with promotions that may be offered from time to time on the Service.
+      We use the information that we collect on the Service to understand and analyze the usage trends and preferences
+      of our users, to improve the Service, and to develop new products, services, features, and functionality.
+      We may use your email address or other information we collect on the Service (i) to contact you for administrative
+      purposes such as customer service, to address intellectual property infringement, right of privacy violations or
+      defamation issues related to your User Content posted on the Service or (ii) to send communications, including
+      updates on promotions and events, relating to products and services offered by us and by third parties we work
+      with.
+      <br><br>We may use “cookies” information and “automatically collected” information we collect on the Service to:
+      (i) personalize our services, such as remembering your information so that you will not have to re-enter it during
+      your visit or the next time you visit the Service; (ii) provide customized advertisements, content, and
+      information; (iii) monitor and analyze the effectiveness of Service and third-party marketing activities; (iv)
+      monitor aggregate Site usage metrics such as total number of visitors and pages viewed; and (v) track your
+      entries, submissions, and status in any promotions or other activities on the Service.
+      <br>When we disclose information. Except as described in this Policy, we will not disclose your information that
+      we collect on the Service to third parties without your consent. We may disclose information to third parties if
+      you consent to us doing so, as well as in the following circumstances:
+      If you request Storage Services, we may disclose your information to Movers.
+      If you designate an alternate contact to receive notice regarding your Items, we may reach out to such alternate
+      contact with information regarding your Items and your account, including: notice that we will dispose of your
+      Items if it is deemed abandoned; identification, descriptions, and photographs of your Items; and financial
+      information, including amounts due.
+      <br><br>We work with other third party service providers to provide website, application development, hosting,
+      maintenance, and other services for us. These third parties may have access to or process your information as part
+      of providing those services for us. Generally, we limit the information provided to these service providers to
+      that which is reasonably necessary for them to perform their functions.
+      Any information that you voluntarily choose to include in a publicly accessible area of the Service, such as a
+      public profile page, will be available to anyone who has access to that content, including other users.
+      <br><br>We may make certain automatically-collected, aggregated, or otherwise non-personallyidentifiable
+      information available to third parties for various purposes, including (i) compliance with various reporting
+      obligations; (ii) for business or marketing purposes; or (iii) to assist such parties in understanding our users’
+      interests, habits, and usage patterns for certain programs, content, services, advertisements, promotions, and/or
+      functionality available through the Service.
+      <br><br>We may disclose your information upon request by a government entity, if required to do so by law or in
+      the good-faith belief that such action is necessary to comply with state and federal laws (such as U.S. copyright
+      law), in response to a court order, judicial or other government subpoena or warrant, or to otherwise cooperate
+      with law enforcement or other governmental agencies.
+      <br><br>We also reserve the right to disclose your information that we believe, in good faith, is appropriate or
+      necessary to: (i) take precautions against liability; (ii) protect ourselves or others from fraudulent, abusive,
+      or unlawful uses or activity; (iii) investigate and defend ourselves against any third-party claims or
+      allegations; (iv) protect the security or integrity of the Service and any facilities or equipment used to make
+      the Service available; or (v) protect our property or other legal rights (including, but not limited to,
+      enforcement of our agreements), or the rights, property, or safety of others.
+      Information about our users, including personal information, may be disclosed and otherwise transferred to an
+      acquirer, successor, or assignee as part of any merger, acquisition, debt financing, sale of assets, or similar
+      transaction, as well as in the event of an insolvency, bankruptcy, or receivership in which information is
+      transferred to one or more third parties as one of our business assets.
+      <br>Your Choices.<br><br>
+      You may, of course, decline to share certain personal information with us, in which case we may not be able to
+      provide to you some of the features and functionality of the Service. You may amend, correct, or delete your
+      account information and preferences at any time by updating your account on the Service. If you wish to access or
+      amend any other personal information we hold about you, you may contact us at contact@popoutbox.in Please note
+      that while any changes you make will be reflected in active user databases instantly or within a reasonable period
+      of time, we may retain all information you submit for backups, archiving, prevention of fraud and abuse,
+      analytics, satisfaction of legal obligations, or where we otherwise reasonably believe that we have a legitimate
+      reason to do so.
+      <br><br>If you receive commercial email from us, you may unsubscribe at any time by following the instructions
+      contained within the email. You may also opt-out from receiving commercial email from us, and any other
+      promotional communications that we may send to you from time to time, by sending your request to us by email at
+      contact@popoutbox.in or by writing to us at the address given at the end of this Policy.
+      <br>Please be aware that if you opt out of receiving commercial email from us or otherwise modify the nature or
+      frequency of promotional communications you receive from us, it may take up to ten business days for us to process
+      your request, and you may receive promotional communications from us that you have opted-out from during that
+      period. Additionally, even after you opt-out from receiving commercial messages from us, you will continue to
+      receive administrative messages from us regarding the Service.
+
+      <br><br>
+
+    <h4 class="mark">Third-Party Services:</h4>
+    <p class="content is-large">
+      The Service may contain features or links to websites and services provided by third parties. Any information you
+      provide on third-party websites or services is provided directly to the operators of such services and is subject
+      to those operators’ policies, if any, governing privacy and security, even if accessed through the Service. We are
+      not responsible for the content or privacy and security practices and policies of third-party websites or services
+      to which links or access are provided through the Service. We encourage you to learn about third parties’ privacy
+      and security policies before providing them with information<br>
+      Children’s Privacy.<br>
+      <br>Protecting the privacy of young children is especially important. Our Service is not directed to children
+      under the age of 13, and we do not knowingly collect personal information from children under the age of 13
+      without obtaining parental consent. If you are under 13 years of age, then please do not use or access the Service
+      at any time or in any manner. If we learn that personally identifiable information has been collected on the
+      Service from persons under 13 years of age and without verifiable parental consent, then we will take the
+      appropriate steps to delete this information. If you are a parent or guardian and discover that your child under
+      13 years of age has obtained an account on the Service, then you may alert us at contact@popoutbox.in and request
+      that we delete that child’s personally identifiable information from our systems.<br>
+      <br>
+    <h4 class="mark">Data Security:</h4>
+    <p class="content is-large">
+      We use certain physical, managerial, and technical safeguards in an effort to protect the integrity and security
+      of personal information that we collect and maintain. We cannot, however, ensure or warrant the security of any
+      information you transmit to us or store on the Service, and you do so at your own risk. We also cannot guarantee
+      that such information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical,
+      technical, or managerial safeguards.<br>
+      <br>
+    <h4 class="mark">In the Event of Merger or Sale:</h4>
+    <p class="content is-large">
+      In the event that all or a portion of Popoutbox. or its assets are acquired by or merged with a third party
+      entity, we reserve the right, in any of these circumstances, to transfer or assign the information that we have
+      collected from users in connection with such merger, acquisition, sale, or other change of control.<br>
+      <br>
+    <h4 class="mark">Changes and Updates to this Policy:</h4>
+    <p class="content is-large">
+      Please revisit this page periodically to stay aware of any changes to this Policy, which we may update from time
+      to time. In general, we only use your personal information in the manner described in the Policy in effect when we
+      received that personal information. If we modify this Policy, we will make it available through the Service, and
+      indicate the date of the latest revision. In the event that the modifications materially alter your rights or
+      obligations hereunder, we will make reasonable efforts to notify you of the change. For example, we may send a
+      message to your email address, if we have one on file, or generate a pop-up or similar notification when you
+      access the Service for the first time after such material changes are made. Your continued use of the Service
+      after the revised Policy has become effective indicates that you have read, understood and agreed to the current
+      version of this Policy.<br>
+      <br>
+    <h4 class="mark">Our Contact Information:</h4>
+    <p class="content is-large">
+      Please contact us with any questions or comments about this Policy, your personal information, our use and
+      disclosure practices, or your consent choices by email at contact@popoutbox.in.
+      Popoutbox
+      <br><br>
+    </p>
+
+  </div>
+  <footer class="footer" style="color: #ffffff; background-color:#3e57b0;">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-half-desktop is-full-mobile">
+          <h2 id="contact" class="title is-4" style="color: #ffffff">
+            Contact Information
+          </h2>
+
+          <div class="address">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px; margin-bottom: 0;">
+              <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Address:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">
+              43, Appadurai 1st St, Vasantha nagar, Chinna <br />
+              Chembarambakkam, Ayanavaram, Chennai,<br />Tamil Nadu 600023
+            </p>
+          </div>
+          <br>
+          <div class="phone">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-phone fa-rotate-90" style="margin-right: 10px;"></i> Phone:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">+91 75500 77535</p>
+          </div>
+          <br>
+          <div class="email">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-envelope" style="margin-right: 10px;"></i> Email:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">contact@popoutbox.in</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="buttons">
+      <p class="copyright-text">
+        <a class="copy" href="#about-us">&copy; About Us,&nbsp;</a>
+        <a class="copy" href="#contact-us">Contact Us,&nbsp; </a>
+        <a class="copy" href="Privacy_policy.html"> Privacy Policy,&nbsp; </a>
+        <a class="copy" href="Terms.html"> Terms & Conditions,&nbsp; </a>
+        <a class="copy" href="Prohibited_privacy.html">Prohibited Items Policy,&nbsp;</a>
+        <a class="copy" href="Refund.html"> Refund Policy.&nbsp; </a>
+      </p>
+    </section>
+  </footer>
+
+</body>
+
+</html>

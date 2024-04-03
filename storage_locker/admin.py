@@ -1,0 +1,49 @@
+from django.contrib import admin
+
+# Register your models here.
+from .models import (
+    BizAccessType,
+    BizLkr,
+    BizLkrType,
+    Book,
+    BusinessInfo,
+    CodeTable,
+    CommTemplate,
+    Customer,
+    CustomerCommunication,
+    Employee,
+    InstrumentBiz,
+    LkrCatalog,
+    LkrStatusLog,
+    LkrSummary,
+    LockStatusLog,
+    Payment,
+    PaymentType,
+    Prebook,
+    Reqreslog,
+    RequestConfirm,
+    SecurityPin,
+    Device,
+)
+admin.site.register(BizAccessType)
+admin.site.register(BizLkr)
+admin.site.register(BizLkrType)
+admin.site.register(Book)
+admin.site.register(BusinessInfo)
+admin.site.register(CodeTable)
+admin.site.register(CommTemplate)
+admin.site.register(Customer)
+admin.site.register(CustomerCommunication)
+admin.site.register(Employee)
+admin.site.register(InstrumentBiz)
+admin.site.register(LkrCatalog)
+admin.site.register(LkrStatusLog)
+admin.site.register(LkrSummary)
+admin.site.register(LockStatusLog)
+admin.site.register(Payment)
+admin.site.register(PaymentType)
+admin.site.register(Prebook)
+admin.site.register(Reqreslog)
+admin.site.register(RequestConfirm)
+admin.site.register(SecurityPin)
+admin.site.register(Device)

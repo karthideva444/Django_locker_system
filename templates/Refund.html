@@ -1,0 +1,276 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popoutbox</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="16x16">
+
+  <style>
+    .mark {
+      font-weight: bold;
+    }
+
+    .refund-policy {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .h4 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .refund {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: black;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    .navbar-item img {
+      max-height: 70px;
+    }
+
+    .smaller-image {
+      max-width: 300px;
+      display: flex;
+      margin-left: 150px;
+    }
+
+    .welcome-text {
+      font-size: 44px;
+      margin-bottom: 10px;
+      margin-left: 150px;
+      font-weight: bold;
+    }
+
+    .custom-column {
+      height: 300px;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+
+    .media-content {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      .smaller-image {
+        max-width: 400px;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media(max-width: 767px) {
+
+      /* <== You can change this break point as per your  needs */
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .smaller-image {
+        max-width: 210px;
+        margin-left: 50px;
+      }
+
+      .welcome-text {
+        font-size: 20px;
+      }
+
+      .media-content {
+        overflow-x: unset !important;
+      }
+
+      .copyright-text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .copyright-text {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      /* Add some padding for better visibility */
+    }
+
+    .copy {
+      color: #e3e9ff;
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav class="navbar is-transparent" style="background-color: #e3e9ff;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="group" src="{% static 'img/group-513779.png' %}" alt="group image" />
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="content is-large" style="margin-right: 160px; color:#6291d8">
+              <span><a href="#contact">Contact Us</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="contain" style="background-color: #e3e9ff;">
+    <div class="columns is-vcentered">
+      <div class="column is-half has-text-right">
+        <img class="img smaller-image img-centered" src="{% static 'img/group-513782.png' %}" />
+      </div>
+      <div class="column is-half">
+        <div class="welcome-text">
+          <span class="text-wrapper">REFUND POLICY</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <br><br>
+  <div class="refund">
+    <div class="refund-policy">
+      <h2 class="title is-4">Cancellation of Rental Lockers</h2>
+      <p class="content is-large">If you decide to cancel your locker rental booking 30 mins before the scheduled time
+        slot, you are eligible for a full refund.</p>
+      <p class="content is-large">Contact our customer support team as soon as possible to initiate the cancellation
+        process.</p>
+      <p class="content is-large">Refunds will be processed using the same payment method used for the original
+        transaction.</p>
+    </div>
+    <br><br>
+    <div class="refund-policy">
+      <h2 class="title is-4">Damaged or Defective Lockers</h2>
+      <p class="content is-large">In the rare event that you receive a damaged or defective locker, please contact our
+        customer support team.</p>
+      <p class="content is-large">Provide clear pictures of the damaged or defective locker, along with a detailed
+        description of the problem.</p>
+      <p class="content is-large">We will assess the situation and provide instructions on replacing the locker.</p>
+      <p class="content is-large">Once we receive the damaged or defective locker, we will either replace it or issue a
+        refund, as per your preference.</p>
+    </div>
+    <br><br>
+    <div class="refund-policy">
+      <h1 class="title is-4">Refunds</h1>
+      <p class="content is-large"><strong>Refund Eligibility:</strong> Refunds are only applicable in the cases
+        mentioned
+        above (damaged or defective lockers, and cancellation).</p>
+      <p class="content is-large">Refunds will not be provided for cancellations made after the scheduled time slots.
+      </p>
+      <p class="content is-large"><strong>Refund Processing Time:</strong> Please allow up to 3 business days for the
+        refund to be processed after we have received the returned locker or confirmed the cancellation.</p>
+      <p class="content is-large"><strong>Refund Method:</strong> Refunds will be issued to the original payment method
+        used for the transaction.</p>
+      <p class="content is-large">If the original payment method is no longer valid, please contact our customer support
+        team to make alternative arrangements.</p>
+    </div>
+    <br><br>
+    <div class="refund-policy">
+      <h2 class="title is-4">Contact Information</h2>
+      <p class="content is-large"><strong>For returns and refunds inquiries, please contact our customer support
+          team:</strong></p>
+    </div>
+    <br><br>
+    <p class="content is-large"><strong>Additional Notes:</strong> Locker Conditions: Please ensure that lockers are
+      returned in the same condition as they were received to qualify for a refund.</p>
+    <p class="content is-large"><strong>Late Cancellation:</strong> Refunds for cancellations made after the scheduled
+      slots may be considered on a case-by-case basis and are subject to management approval.</p>
+    <p class="content is-large"><em>This policy is subject to change, and any updates will be reflected on our
+        website.</em></p>
+
+    <p class="content is-large">Thank you for choosing Popoutbox for your self-storage needs!</p>
+  </div>
+  <footer class="footer" style="color: #ffffff; background-color:#3e57b0;">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-half-desktop is-full-mobile">
+          <h2 id="contact" class="title is-4" style="color: #ffffff">
+            Contact Information
+          </h2>
+
+          <div class="address">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px; margin-bottom: 0;">
+              <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Address:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">
+              43, Appadurai 1st St, Vasantha nagar, Chinna <br />
+              Chembarambakkam, Ayanavaram, Chennai,<br />Tamil Nadu 600023
+            </p>
+          </div>
+          <br>
+          <div class="phone">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-phone fa-rotate-90" style="margin-right: 10px;"></i> Phone:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">+91 75500 77535</p>
+          </div>
+          <br>
+          <div class="email">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-envelope" style="margin-right: 10px;"></i> Email:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">contact@popoutbox.in</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright-text">
+      <a class="copy" href="#about-us">&copy; About Us,&nbsp;</a>
+      <a class="copy" href="#contact-us">Contact Us,&nbsp; </a>
+      <a class="copy" href="Privacy_policy.html"> Privacy Policy,&nbsp; </a>
+      <a class="copy" href="Terms.html"> Terms & Conditions,&nbsp; </a>
+      <a class="copy" href="Prohibited_privacy.html">Prohibited Items Policy,&nbsp;</a>
+      <a class="copy" href="Refund.html"> Refund Policy.&nbsp; </a>
+    </p>
+  </footer>
+</body>
+
+</html>

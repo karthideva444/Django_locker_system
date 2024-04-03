@@ -1,0 +1,462 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popoutbox</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="16x16">
+  <style>
+    html{scroll-behavior:smooth}
+    .navbar-item img {
+      max-height: 70px;
+    }
+
+    .smaller-image {
+      max-width: 550px;
+    }
+
+    .welcome-text {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    .custom-column {
+      height: 300px;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+
+    .media-content {
+      margin-top: 50px;
+    }
+    .p {
+      margin-left: 0;
+      position: absolute;
+      top: 40px;
+      left: 61px;
+    }
+    .p >span{
+      padding:35px;
+      line-height: 5px;
+    }
+    @media screen and (max-width: 1050px) {
+      .smaller-image{
+        max-width: 400px;
+      }
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+  }
+  @media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+    .reverse-columns {
+      flex-direction: column-reverse;
+      display: flex;
+    }
+    .img-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .smaller-image{
+      max-width: 300px;
+    }
+    .media-content{
+      overflow-x: unset !important;
+    }
+  }
+
+  .copyright-text {
+    margin: 0;
+    padding: 10px; 
+    text-align: center; /* Add some padding for better visibility */
+  }
+  .copy{
+    color: #e3e9ff;
+  }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-transparent"style="background-color: #e3e9ff;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="group" src="{% static 'img/group-513779.png' %}" alt="group image" />
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="content is-large" style="margin-right: 160px; color:#6291d8">
+              <span><a href="#contact">Contact Us</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- WELCOME SECTION -->
+  
+  <section class="section" style="background-color: #e3e9ff;">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-half">
+          <div class="welcome-text">
+            <span class="text-wrapper">WELCOME TO<br /></span> <span class="span">POPOUTBOX</span>
+          </div>
+          <p class="content is-large">
+            “Experience the future of storage with our innovative automated smart lockers, providing a seamless,
+            no-contact solution for all your storage needs”
+          </p>
+          <div class="has-text-white has-text-centered" style="
+                width: 230px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #3e57b0;
+                font-weight: bold;
+                font-size:20px;
+              ">
+            <img src="{% static 'img/whatsapp-logo-icon.png' %}" alt="Book Now" style="margin-right: 60px" />
+            Book Now
+          </div>
+        </div>
+        <div class="column is-half has-text-right">
+          <img class="img smaller-image img-centered" src="{% static 'img/group-513782.png' %}" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Popoutbox -->
+  <section class="section">
+    <div class="container">
+      <h1 id="about-us" class="title has-text-centered is-size-1">About Popoutbox</h1>
+      <div class="columns is-vcentered">
+        <div class="column is-half has-text-left">
+          <img class="img smaller-image img-centered" src="{% static 'img/HAMILTON.png' %}" />
+        </div>
+        <div class="column is-half">
+          <p class="content is-large">
+            Popoutbox Automated Storage Keyless Lockers is a self service that allows you book lockers 24 x 7.
+            Our facility provides storage for your bags, backpacks and other personal items.<br /><br />
+            We envision a future where traditional lock and key systems are replaced by seamless, automated storage
+            solutions that enhance security, convenience, and efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features of Popoutbox -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered is-size-1">Features of Popoutbox</h1>
+      <div class="columns">
+        <div class="column">
+          <div class="box" >
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="{% static 'img/user-people-person-users-man.png' %}" alt="User Icon">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Self service</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="{% static 'img/group_513780.png' %}" alt="Page Icon">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Easy to access</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="{% static 'img/24hours-7days.png' %}" alt="Clock Icon">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">24/7 access</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="{% static 'img/security-19.png' %}" alt="Security Icon">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Completely secure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIVE STEP PROCESS SECTION -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered is-size-1">FOUR Step process</h1>
+      <div class="columns">
+        <div class="column">
+          <!-- <div class="box"> -->
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{% static 'img/stroke-close-copy-4.png' %}" alt="Select locker size icon">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Select locker size</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <div class="column">
+          <!-- <div class="box"> -->
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{% static 'img/group-513792.png' %}" alt="Enter phone number icon">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Enter phone number</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <div class="column">
+          <!-- <div class="box"> -->
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{% static 'img/group-513793.png' %}" alt="Enter PIN icon">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Enter PIN</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <!-- <div class="column">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{% static 'img/group-513794.png' %}" alt="Re-enter PIN icon">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Re-enter PIN</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="column">
+          <!-- <div class="box"> -->
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{% static 'img/vector-2.svg' %}" alt="Payment icon">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Payment</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose us? -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered is-size-1">Why Choose us?</h1>
+      <!-- INNOVATION -->
+      <div class="columns is-vcentered reverse-columns">
+        <div class="column is-four-fifths responsive-text">
+            <p class="title has-text-left img-centered">Innovation</p>
+            <p class="content is-large has-text-left">
+                We are committed to staying at the forefront of technology.<br> 
+                Our lockers feature cutting-edge automation,touchless<br> 
+                access, and user-friendly interfaces, ensuring that you have<br> 
+                access to the latest advancements in the industry.
+            </p>
+        </div>
+        <div class="column">
+            <figure class="image is-128x128">
+                <img src="{% static 'img/vector-3.svg' %}" alt="Innovation Icon">
+            </figure>
+        </div>
+    </div>
+    
+      <!-- SECURITY -->
+      <div class="columns">
+        <div class="column img-centered">
+          <figure class="image is-128x128">
+            <img src="{% static 'img/vector.svg' %}" alt="Security Icon">
+          </figure>
+        </div>
+        <div class="column">
+          <p class="title has-text-right img-centered">Security</p>
+          <p class="content is-large has-text-right">
+            Your security is our top priority. Our lockers are built with robust materials and advanced locking
+            mechanisms to protect your valuables and maintain your peace of mind.
+          </p>
+        </div>
+      </div>
+<!-- CUSTOMIZATION -->
+<div class="columns is-vcentered reverse-columns">
+  <div class="column is-four-fifths">
+      <p class="title has-text-left img-centered">Customization</p>
+      <p class="content is-large has-text-left">
+        We understand that every client’s needs are unique. That’s<br>
+        why we offer customizable locker solutions to suit your<br> 
+        specific requirements, whether you’re a hotel, a business,<br> 
+        or an individual.
+      </p>
+  </div>
+  <div class="column">
+      <figure class="image is-128x128">
+          <img src="{% static 'img/vector-4.svg' %}" alt="Innovation Icon">
+      </figure>
+  </div>
+</div>
+<!-- Convenience -->
+<div class="columns">
+  <div class="column img-centered">
+    <figure class="image is-128x128">
+      <img class="convenience" src="{% static 'img/ellipse-31.svg' %}" alt="Convenience Icon">
+    </figure>
+  </div>
+  <div class="column">
+    <p class="title has-text-right img-centered">Convenience</p>
+    <p class="content is-large has-text-right">
+      Say goodbye to lost keys and forgotten combinations. Our keyless entry systems make accessing your stored
+      items as easy as a touch or a swipe.
+    </p>
+  </div>
+</div>
+<!-- Sustainability -->
+<div class="columns is-vcentered reverse-columns">
+  <div class="column is-four-fifths">
+      <p class="title has-text-left img-centered">Sustainability</p>
+      <p class="content is-large has-text-left">
+        We are dedicated to eco-friendly practices. Our lockers are<br> 
+        designed with sustainability in mind,featuring energy-<br>
+        efficient components and materials that<br>
+        minimize our environmental footprint.
+      </p>
+  </div>
+  <div class="column">
+      <figure class="image is-128x128">
+          <img src="{% static 'img/group-513810.png' %}" alt="Innovation Icon">
+      </figure>
+  </div>
+</div>
+    </div>
+  </section>
+  <footer class="footer" style="color: #ffffff; background-color:#3e57b0;">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-half-desktop is-full-mobile">
+          <h2 id="contact" class="title is-4" style="color: #ffffff">
+            Contact Information
+          </h2>
+  
+          <div class="address">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px; margin-bottom: 0;">
+              <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>  Address:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">
+              43, Appadurai 1st St, Vasantha nagar, Chinna <br />
+              Chembarambakkam, Ayanavaram, Chennai,<br />Tamil Nadu 600023
+            </p>
+          </div>
+          <br>
+          <div class="phone">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-phone fa-rotate-90" style="margin-right: 10px;"></i> Phone:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">+91 75500 77535</p>
+          </div>
+          <br>
+          <div class="email">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-envelope" style="margin-right: 10px;"></i> Email:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">contact@popoutbox.in</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright-text"> 
+      <a class="copy" href="#about-us">&copy; About Us,&nbsp;</a> 
+      <a class="copy" href="#contact-us">Contact Us,&nbsp; </a> 
+      <a class="copy" href="Privacy_policy.html"> Privacy Policy,&nbsp; </a> 
+      <a class="copy" href="Terms.html"> Terms & Conditions,&nbsp;  </a> 
+      <a class="copy" href="Prohibited_privacy.html">Prohibited Items Policy,&nbsp;</a>
+      <a class="copy" href="Refund.html"> Refund Policy.&nbsp;  </a> 
+  </p>
+  </footer>
+  <script>
+    // JavaScript to toggle the menu
+    document.addEventListener('DOMContentLoaded', function () {
+      var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(function ($el) {
+          $el.addEventListener('click', function () {
+            var target = $el.dataset.target;
+            var $target = document.getElementById(target);
+            $el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

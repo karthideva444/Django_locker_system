@@ -1,0 +1,236 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popoutbox</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="16x16">
+  <style>
+    .para {
+      text-indent: 2em;
+      color: black;
+      font-size: 1.5rem;
+    }
+
+    .h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 5px;
+      color: black;
+    }
+
+    .Prohibited_privacy {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    .navbar-item img {
+      max-height: 70px;
+    }
+
+    .smaller-image {
+      max-width: 300px;
+      display: flex;
+      margin-left: 150px;
+    }
+
+    .welcome-text {
+      font-size: 44px;
+      margin-bottom: 10px;
+      margin-left: 200px;
+      font-weight: bold;
+    }
+
+    .custom-column {
+      height: 300px;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 70px;
+    }
+
+    .media-content {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      .smaller-image {
+        max-width: 450px;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .copyright-text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @media(max-width: 767px) {
+
+      /* <== You can change this break point as per your  needs */
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+
+      .img-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .media-content {
+        overflow-x: unset !important;
+      }
+    }
+
+    .copyright-text {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      /* Add some padding for better visibility */
+    }
+
+    .copy {
+      color: #e3e9ff;
+    }
+    @media screen and (max-width: 550px) {
+      .smaller-image {
+        max-width: 210px;
+        margin-left: 50px;
+
+      }
+      .welcome-text{
+        font-size: 20px;
+        margin-left: 70px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-transparent" style="background-color: #e3e9ff;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'home' %}">
+        <img class="group" src="{% static 'img/group-513779.png' %}" />
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="contain" style="background-color: #e3e9ff;">
+    <div class="columns is-vcentered">
+      <div class="column is-half">
+        <img class="img smaller-image img-centered" src="{% static 'img/group-513782.png' %}" />
+      </div>
+      <div class="column is-half">
+        <div class="welcome-text">
+          <span class="text-wrapper">PROHIBITED<br /></span> <span class="span">ITEMS POLICY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="Prohibited_privacy">
+    <P>
+    <h4 class="h4">Prohibited items policy</h4>
+    <p class="content is-large">
+      This Prohibited Items Policy (“Policy”) describes the items you may not book Storage Services for
+      ("Prohibited Items”) via the Popoutbox Service. Any capitalized terms not defined herein will have
+      the meaning set forth in our Terms of Service [www.popoutbox.com/terms-conditions] We may modify this
+      Policy at any time, and the examples included are not exhaustive. By accessing the online portion of
+      the Service, you agree to the latest version of this Policy. If you violate this Policy, we may terminate
+      or suspend your use of the Services, or cancel Storage Services in accordance with the Terms of Service
+      [www.popoutbox.com/terms-conditions] and our Cancellation Policy.
+      <br>
+      <br>
+    <p class="content is-large">
+      Prohibited Items include, but are not limited to: animals, plants, or other living things; antiques; weapons;
+      bills of exchange; securities; bonds; bullion; currency; deeds; documents; evidence of debt; credit cards;
+      firearms; money; gems; jewelry; watches; precious stones; pearls; precious metals, gold, silver, or platinum
+      articles (including gold, silver, and platinum household articles such as silverware, coffee-service sets,
+      trays, candlesticks and dishes); stock certificates, stamp collections, stamps (postage, revenue, or trading),
+      or letters or packets of letters; perishable goods; items with strong smells; explosive or highly flammable
+      substances;
+      corrosive materials; combustible liquids; radioactive materials; compressed gas; biological agents; toxic agents;
+      asbestos; precious materials; illegal substances; goods obtained by illegal means; hazardous materials, or any
+      other items,
+      the possession, usage, or storage of which may harm of your other Items, or violate laws, rules, or regulations.
+    </P>
+    <br>
+  </div>
+  <footer class="footer" style="color: #ffffff; background-color:#3e57b0;">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-half-desktop is-full-mobile">
+          <h2 id="contact" class="title is-4" style="color: #ffffff">
+            Contact Information
+          </h2>
+
+          <div class="address">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px; margin-bottom: 0;">
+              <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Address:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">
+              43, Appadurai 1st St, Vasantha nagar, Chinna <br />
+              Chembarambakkam, Ayanavaram, Chennai,<br />Tamil Nadu 600023
+            </p>
+          </div>
+          <br>
+          <div class="phone">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-phone fa-rotate-90" style="margin-right: 10px;"></i> Phone:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">+91 75500 77535</p>
+          </div>
+          <br>
+          <div class="email">
+            <h3 class="content is-large" style="color: #ffffff; margin-left: 100px;margin-bottom: 0;">
+              <i class="fas fa-envelope" style="margin-right: 10px;"></i> Email:
+            </h3>
+            <p class="content is-medium" style="margin-left: 100px;">contact@popoutbox.in</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="buttons">
+      <p class="copyright-text"> 
+        <a class="copy" href="#about-us">&copy; About Us,&nbsp;</a> 
+        <a class="copy" href="#contact-us">Contact Us,&nbsp; </a> 
+        <a class="copy" href="Privacy_policy.html"> Privacy Policy,&nbsp; </a> 
+        <a class="copy" href="Terms.html"> Terms & Conditions,&nbsp;  </a> 
+        <a class="copy" href="Prohibited_privacy.html">Prohibited Items Policy,&nbsp;</a>
+        <a class="copy" href="Refund.html"> Refund Policy.&nbsp;  </a> 
+    </p>
+    </section>
+  </footer>
+</body>
+
+</html>
